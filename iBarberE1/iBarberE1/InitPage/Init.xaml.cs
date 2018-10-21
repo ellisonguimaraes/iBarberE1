@@ -67,7 +67,9 @@ namespace iBarberE1.InitPage
 
         private void LoginButton(object sender, EventArgs args)
         {
-            DisplayAlert("Entrou", "LoginButton", "OK");
+            //DisplayAlert("Entrou", "LoginButton", "OK");
+
+            Navigation.PushAsync(new Login.LoginPage());
         }
     }
 }

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="iBarberE1.InitPage.Login.RegisterPage"
+             BackgroundColor="#040C1E"
+             Title="Cadastro">
+    <ContentPage.Content>
+        
+        <RelativeLayout HorizontalOptions="FillAndExpand">
+            <Image Source="BgInit2.jpg"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"/>
+
+
+            <StackLayout Spacing="20" Margin="0, 40, 0, 20" 
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.6}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2}">
+
+                <Image Source="logo.png" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+
+                <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                    <Image x:Name="BgEntryLogin" Source="BgEntryLogin.png" />
+                    <Image Source="LoginIcon.png"
+                            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=BgEntryLogin, Property=Height, Factor=0.6}"
+                            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=BgEntryLogin, Property=Width, Factor=0.1}"
+                            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=BgEntryLogin, Property=Height, Factor=0.2}"
+                            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=BgEntryLogin, Property=Width, Factor=0.05}"
+                            />
+
+                    <Entry Placeholder="Login" PlaceholderColor="LightGray" FontSize="14" 
+                            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView,ElementName=BgEntryLogin,Property=Width,Factor=0.70}"
+                            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView,ElementName=BgEntryLogin,Property=Height,Factor=1.1}"
+                            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,ElementName=BgEntryLogin,Property=Width,Factor=0.20}"/>
+                </RelativeLayout>
+
+                <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                    <Image x:Name="BgEntryEmail" Source="BgEntryLogin.png" />
+                    <Image Source="EmailIcon.png"
+                            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=BgEntryEmail, Property=Height, Factor=0.6}"
+                            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=BgEntryEmail, Property=Width, Factor=0.1}"
+                            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=BgEntryEmail, Property=Height, Factor=0.2}"
+                            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=BgEntryEmail, Property=Width, Factor=0.05}"
+                            />
+
+                    <Entry Placeholder="Email" PlaceholderColor="LightGray" FontSize="14" 
+                            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView,ElementName=BgEntryEmail,Property=Width,Factor=0.70}"
+                            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView,ElementName=BgEntryEmail,Property=Height,Factor=1.1}"
+                            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,ElementName=BgEntryEmail,Property=Width,Factor=0.20}"/>
+                </RelativeLayout>
+
+                <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                    <Image x:Name="BgEntryPassword" Source="BgEntryLogin.png" />
+                    <Image Source="PasswordIcon.png"
+                            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=BgEntryPassword, Property=Height, Factor=0.6}"
+                            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=BgEntryPassword, Property=Width, Factor=0.1}"
+                            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=BgEntryPassword, Property=Height, Factor=0.2}"
+                            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=BgEntryPassword, Property=Width, Factor=0.05}"
+                            />
+
+                    <Entry Placeholder="Senha" PlaceholderColor="LightGray" FontSize="14"  IsPassword="True"
+                            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView,ElementName=BgEntryPassword,Property=Width,Factor=0.70}"
+                            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView,ElementName=BgEntryPassword,Property=Height,Factor=1.1}"
+                            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,ElementName=BgEntryPassword,Property=Width,Factor=0.20}"/>
+                </RelativeLayout>
+
+                    
+                <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                    <Image x:Name="BgEntryPasswordConfirm" Source="BgEntryLogin.png" />
+                    <Image Source="PasswordIcon.png"
+                            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=BgEntryPasswordConfirm, Property=Height, Factor=0.6}"
+                            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=BgEntryPasswordConfirm, Property=Width, Factor=0.1}"
+                            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=BgEntryPasswordConfirm, Property=Height, Factor=0.2}"
+                            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=BgEntryPasswordConfirm, Property=Width, Factor=0.05}"
+                            />
+
+                    <Entry Placeholder="Confirmar Senha" PlaceholderColor="LightGray" FontSize="14"  IsPassword="True"
+                            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView,ElementName=BgEntryPasswordConfirm,Property=Width,Factor=0.70}"
+                            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView,ElementName=BgEntryPasswordConfirm,Property=Height,Factor=1.1}"
+                            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,ElementName=BgEntryPasswordConfirm,Property=Width,Factor=0.20}"/>
+                </RelativeLayout>
+
+                <Button Clicked="Cadastrar" Margin="0, 20, 0, 0" Text="Cadastrar" TextColor="White" BackgroundColor="#4F2F17" FontSize="14" BorderRadius="25"/>
+                    
+            </StackLayout>
+
+        </RelativeLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

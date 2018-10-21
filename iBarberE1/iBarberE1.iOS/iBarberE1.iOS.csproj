@@ -226,4 +226,19 @@
   <ItemGroup>
     <BundleResource Include="Resources\prod4.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\BgEntryLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\LoginIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\PasswordIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ButtonLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\EmailIcon.png" />
+  </ItemGroup>
 </Project>

@@ -11,7 +11,8 @@ namespace iBarberE1
         {
             InitializeComponent();
 
-            MainPage = new iBarberE1.InitPage.Init();
+            MainPage = new NavigationPage(new iBarberE1.InitPage.Init()){ BarBackgroundColor = Color.FromHex("#00698C"), BarTextColor = Color.White };
+            
         }
 
         protected override void OnStart()

@@ -131,6 +131,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="Bgbarber.png" />
+    <Content Include="BgEntryLogin.png" />
     <Content Include="BgInit.jpg" />
     <Content Include="BgInit2.jpg" />
     <Content Include="ButtonAberto.png" />
@@ -138,9 +139,13 @@
     <Content Include="ButtonFechado.png" />
     <Content Include="ButtonInit.png" />
     <Content Include="ButtonInitOk.png" />
+    <Content Include="ButtonLogin.png" />
+    <Content Include="EmailIcon.png" />
     <Content Include="Glinear.png" />
+    <Content Include="LoginIcon.png" />
     <Content Include="logo.png" />
     <Content Include="logobarber.png" />
+    <Content Include="PasswordIcon.png" />
     <Content Include="prod1.jpg" />
     <Content Include="prod2.jpg" />
     <Content Include="prod3.jpg" />
