@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using iBarberE1.Modelo;
+
 namespace iBarberE1.MainPage
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
@@ -24,6 +26,18 @@ namespace iBarberE1.MainPage
 
             //Associating tap events to the image buttons 
             AgendarButton.GestureRecognizers.Add(tapAgendarButton);
+
+
+
+            List<Servico> servicos = new List<Servico>();
+            servicos.Add(new Servico() { Descricao = "Corte de tesoura", Valor = "R$ 30,00"});
+            servicos.Add(new Servico() { Descricao = "Corte de máquina", Valor = "R$ 15,00" });
+            servicos.Add(new Servico() { Descricao = "Corte de tesoura + máquina", Valor = "R$ 20,00" });
+            servicos.Add(new Servico() { Descricao = "Barba", Valor = "R$ 15,00" });
+
+            ServiceList.ItemsSource = servicos;
+
+
         }
 
         private void Agendar_Tapped(object sender, EventArgs args)
