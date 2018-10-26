@@ -42,10 +42,10 @@ namespace iBarberE1.MainPage
 
         private void Agendar_Tapped(object sender, EventArgs args)
         {
-            DisplayAlert("Agendar", "Agendar_Tapped", "OK");
+            Navigation.PushAsync(new iBarberE1.Agendar.Menu());
         }
-
-
+        
+        
         private void LbLerMais(object sender, EventArgs args)
         {
             if (!End2.IsVisible)
@@ -66,6 +66,6 @@ namespace iBarberE1.MainPage
 
             //LblText.Text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ";
         }
-
+        
     }
 }

@@ -2,20 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="iBarberE1.MainPage.Main"
-             BackgroundColor="#01090E">
+             BackgroundColor="#01090E"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
 
             <StackLayout>
                 <RelativeLayout VerticalOptions="Start" IsVisible="True">
                     <Image Source="Bgbarber.png"
-                           Aspect="AspectFit"
-                           HorizontalOptions="FillAndExpand"
-                           x:Name="Bgbarber"/>
+                            Aspect="AspectFit"
+                            HorizontalOptions="FillAndExpand"
+                            x:Name="Bgbarber"/>
 
                     <Image Source="Glinear.png"
-                           Aspect="AspectFill"
-                           RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Bgbarber, Property=Height, Factor=1}"/>
+                            Aspect="AspectFill"
+                            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Bgbarber, Property=Height, Factor=1}"/>
 
                     <StackLayout VerticalOptions="CenterAndExpand"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Bgbarber, Property=Width, Factor=0.5}"
@@ -26,23 +27,22 @@
                     </StackLayout>
 
                     <StackLayout RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Bgbarber, Property=Width, Factor=1}"
-                                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Bgbarber, Property=Height, Factor=0.20}"
-                                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Bgbarber, Property=Height, Factor=0.90}">
+                                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Bgbarber, Property=Height, Factor=0.20}"
+                                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Bgbarber, Property=Height, Factor=0.90}">
 
                         <RelativeLayout HorizontalOptions="FillAndExpand">
                             <Image Source="ButtonAberto.png" VerticalOptions="StartAndExpand" Margin="0, 17, 0, 0"
-                                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.25}"
-                                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.40}"/>
+                                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.25}"
+                                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.40}"/>
 
                             <Image x:Name="AgendarButton" Source="ButtonAgendar.png" VerticalOptions="StartAndExpand"
-                                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5}"
-                                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5}"/>
+                                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5}"
+                                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5}"/>
                         </RelativeLayout>
 
                     </StackLayout>
 
                 </RelativeLayout>
-
 
 
 
@@ -180,7 +180,6 @@
                 </StackLayout>
 
 
-
                 <StackLayout Spacing="0" IsVisible="True">
 
                     <StackLayout BackgroundColor="#12192C" Padding="40, 16" HorizontalOptions="Start">
@@ -239,25 +238,35 @@
 
                     <BoxView  BackgroundColor="#1A284F" HeightRequest="2"/>
 
-                    <ListView x:Name="ServiceList" Margin="20" RowHeight="50" VerticalOptions="Start" HorizontalOptions="Start">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell>
+                    <StackLayout Margin="20" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Red">
+                        <ListView x:Name="ServiceList" HeightRequest="250" RowHeight="50" BackgroundColor="Green">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
 
-                                    <StackLayout Spacing="0" VerticalOptions="Start">
-                                        <StackLayout Orientation="Horizontal" Padding="15, 10">
-                                            <Label Text="{Binding Descricao}" TextColor="White" FontSize="14"  HorizontalOptions="FillAndExpand"/>
-                                            <Label Text="{Binding Valor}" TextColor="OrangeRed" FontSize="14" />
+                                        <StackLayout Spacing="0" VerticalOptions="Start">
+                                            <StackLayout Orientation="Horizontal" Padding="15, 10">
+                                                <Label Text="{Binding Descricao}" TextColor="White" FontSize="14"  HorizontalOptions="FillAndExpand"/>
+                                                <Label Text="{Binding Valor}" TextColor="OrangeRed" FontSize="14" />
+                                            </StackLayout>
+                                            <BoxView  BackgroundColor="#1A284F" HeightRequest="1" HorizontalOptions="FillAndExpand"/>
                                         </StackLayout>
-                                        <BoxView  BackgroundColor="#1A284F" HeightRequest="1" HorizontalOptions="FillAndExpand"/>
-                                    </StackLayout>
 
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                        
+                        <Button Text="VER MAIS" TextColor="OrangeRed" BackgroundColor="#12192C" VerticalOptions="Start" Margin="40, 0"/>
+                    </StackLayout>
 
-                    <Button Text="VER MAIS" TextColor="OrangeRed" BackgroundColor="#12192C" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Margin="40, 0"/>
+                    
+                    <!--
+                    <Label Text="NADA" TextColor="White"/>
+                    <Label Text="NADA" TextColor="White"/>
+                    <Label Text="NADA" TextColor="White"/>
+                    <Label Text="NADA" TextColor="White"/>
+                    <Label Text="NADA" TextColor="White"/>-->
                 </StackLayout>
 
 

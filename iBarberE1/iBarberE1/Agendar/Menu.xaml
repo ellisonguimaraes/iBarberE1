@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="iBarberE1.Agendar.Menu"
+             BackgroundColor="#01090E"
+             Title="Menu de agendamento">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <Grid RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+
+                    <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="10" Source="Bgbarber.png" Aspect="AspectFit" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+                    <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="10" Source="Glinear.png" Aspect="AspectFit" VerticalOptions="Start"/>
+
+                    <Image Grid.Row="0" Grid.Column="0" Source="logobarber.png" WidthRequest="100" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0, 20, 0, 5"/>
+
+                    <Label Grid.Row="1" Grid.Column="0" Text="Barbearia" TextColor="White" FontAttributes="Bold" FontSize="20" HorizontalOptions="CenterAndExpand"/>
+                    <Label Grid.Row="2" Grid.Column="0" Text="Clube Esporte" TextColor="White" FontAttributes="Bold" FontSize="20"  HorizontalOptions="CenterAndExpand"/>
+
+                    <Button Grid.Row="3" Grid.Column="0" Margin="0, 20, 0, 5" Text="Realizar Agendamento" BackgroundColor="OrangeRed" TextColor="White" HorizontalOptions="Center" BorderRadius="7"/>
+
+                    <Label Grid.Row="4" Grid.Column="0" Text="Aberto" TextColor="LimeGreen" FontSize="16" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+                    <StackLayout Grid.Row="5" Grid.Column="0" Spacing="0" Margin="0, 20, 0, 0">
+                        <StackLayout BackgroundColor="#12192C" Padding="16" HorizontalOptions="Start" Spacing="0">
+                            <Label Text="Ultimos Agendamentos" VerticalTextAlignment="Center" FontSize="18" TextColor="White"/>
+                        </StackLayout>
+
+                        <BoxView BackgroundColor="#1A284F" HeightRequest="1"/>
+                    </StackLayout>
+
+                    <ListView x:Name="ListAgendamento" Grid.Row="6" Grid.Column="0"  HeightRequest="220" RowHeight="50"  SeparatorColor="#1A284F" Margin="20, 20, 20, 0">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" VerticalOptions="Center" Padding="20, 0">
+                                        <StackLayout Spacing="0" HorizontalOptions="FillAndExpand">
+                                            <Label Text="{Binding Data}" TextColor="White"/>
+                                            <Label Text="{Binding Funcionario}" TextColor="Gray"/>
+                                        </StackLayout>
+                                        <Label Text="{Binding Valor}" TextColor="OrangeRed" VerticalOptions="Center"/>
+                                    </StackLayout>
+
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                    <Button Clicked="ButtonViewMore" x:Name="ViewMore" Grid.Row="7" Grid.Column="0" Margin="10" HorizontalOptions="Center" Text="VER MAIS" TextColor="OrangeRed" BackgroundColor="Transparent"/>
+                </Grid>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,115 @@
+﻿ <?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="iBarberE1.MainPage.Main2"
+             BackgroundColor="#01090E"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="StlBarberName" TargetType="Label">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="24"/>
+            </Style>
+
+            <Style x:Key="StlBar" TargetType="StackLayout">
+                <Setter Property="BackgroundColor" Value="#12192C"/>
+                <Setter Property="Padding" Value="40, 16"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+            </Style>
+
+            <Style x:Key="StlBarLabel" TargetType="Label">
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+
+            <Style x:Key="StlBarBoxView" TargetType="BoxView">
+                <Setter Property="BackgroundColor" Value="#1A284F"/>
+                <Setter Property="HeightRequest" Value="2"/>
+                <Setter Property="Margin" Value="0, 0, 0, 15"/>
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid RowSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+
+                <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="10" Source="Bgbarber.png" Aspect="AspectFit" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+                <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="10" Source="Glinear.png" Aspect="AspectFit" VerticalOptions="Start"/>
+
+                <Image Grid.Row="0" IsVisible="False" Grid.Column="0" Source="logobarber.png" WidthRequest="150" HorizontalOptions="CenterAndExpand" BackgroundColor="Green"/>
+
+                <StackLayout IsVisible="False" BackgroundColor="Red" Grid.Row="1" Grid.Column="0" Spacing="0" HorizontalOptions="FillAndExpand" >
+                    <Label Text="Barbearia" Style="{StaticResource StlBarberName}"/>
+                    <Label Text="Clube Esporte" Style="{StaticResource StlBarberName}"/>
+                </StackLayout>
+
+                <RelativeLayout IsVisible="False" BackgroundColor="Pink" Grid.Row="2" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                    <Image  Source="ButtonAberto.png" VerticalOptions="StartAndExpand" Margin="0, 17, 0, 0"
+                                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.25}"
+                                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.40}"/>
+
+                    <Image x:Name="AgendarButton" Source="ButtonAgendar.png" VerticalOptions="StartAndExpand"
+                                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5}"
+                                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5}"/>
+                </RelativeLayout>
+
+
+
+                
+                
+                <StackLayout BackgroundColor="BlueViolet" Grid.Row="3" Grid.Column="0" IsVisible="True" Spacing="0">
+
+                    <StackLayout Style="{StaticResource StlBar}">
+                        <Label Text="Endereço" Style="{StaticResource StlBarLabel}"/>
+                    </StackLayout>
+
+                    <BoxView Style="{StaticResource StlBarBoxView}"/>
+
+
+                    <ListView x:Name="EnderecoListView" HasUnevenRows="True" RowHeight="100" HeightRequest="120">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout x:Name="End1" IsVisible="True" Padding="15, 8">
+                                        <StackLayout Orientation="Horizontal" Spacing="10">
+                                            <BoxView Color="OrangeRed" WidthRequest="5" HeightRequest="5" BackgroundColor="Blue"/>
+                                            <Label Text="{Binding Unidade}" FontAttributes="Bold" HorizontalOptions="FillAndExpand" TextColor="White"/>
+                                        </StackLayout>
+
+                                        <Label TextColor="White" Text="{Binding Logradouro}" Margin="15, 5, 15, 0"/>
+                                        <Label TextColor="White" Text="{Binding Telefones}" HorizontalTextAlignment="Center" Margin="15, 0"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                    <Button x:Name="MoreView" Clicked="ButtonViewMore" Text="Ver mais" BackgroundColor="Transparent" TextColor="OrangeRed" HorizontalOptions="CenterAndExpand" />
+                </StackLayout>
+                
+                
+                
+            </Grid>
+        </ScrollView>
+        
+            
+            
+    </ContentPage.Content>
+</ContentPage>
