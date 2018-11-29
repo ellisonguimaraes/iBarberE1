@@ -60,7 +60,7 @@ namespace iBarberE1.InitPage
 
         void RLButtonOk_Tapped(object sender, EventArgs  args)
         {
-            App.Current.MainPage = new NavigationPage(new MainPage.Main2()) {BarBackgroundColor = Color.FromHex("#00698C") };
+            App.Current.MainPage = new NavigationPage(new MainPage.TabbedMain()) {BarBackgroundColor = Color.FromHex("#00698C") };
         }
 
 

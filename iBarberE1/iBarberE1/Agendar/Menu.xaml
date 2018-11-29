@@ -31,7 +31,7 @@
                     <Label Grid.Row="1" Grid.Column="0" Text="Barbearia" TextColor="White" FontAttributes="Bold" FontSize="20" HorizontalOptions="CenterAndExpand"/>
                     <Label Grid.Row="2" Grid.Column="0" Text="Clube Esporte" TextColor="White" FontAttributes="Bold" FontSize="20"  HorizontalOptions="CenterAndExpand"/>
 
-                    <Button Grid.Row="3" Grid.Column="0" Margin="0, 20, 0, 5" Text="Realizar Agendamento" BackgroundColor="OrangeRed" TextColor="White" HorizontalOptions="Center" BorderRadius="7"/>
+                    <Button Grid.Row="3" Grid.Column="0" Margin="0, 20, 0, 5" Clicked="View_ServicesSelect" Text="Realizar Agendamento" BackgroundColor="OrangeRed" TextColor="White" HorizontalOptions="Center" BorderRadius="7"/>
 
                     <Label Grid.Row="4" Grid.Column="0" Text="Aberto" TextColor="LimeGreen" FontSize="16" FontAttributes="Bold" HorizontalOptions="Center"/>
 

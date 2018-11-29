@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="iBarberE1.MainPage.Barbearia">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="StlBarberName" TargetType="Label">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="24"/>
+            </Style>
+
+            <Style x:Key="StlBar" TargetType="StackLayout">
+                <Setter Property="BackgroundColor" Value="#12192C"/>
+                <Setter Property="Padding" Value="40, 16"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+            </Style>
+
+            <Style x:Key="StlBarLabel" TargetType="Label">
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+
+            <Style x:Key="StlBarBoxView" TargetType="BoxView">
+                <Setter Property="BackgroundColor" Value="#1A284F"/>
+                <Setter Property="HeightRequest" Value="2"/>
+                <Setter Property="Margin" Value="0, 0, 0, 15"/>
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid RowSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+
+                <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" Source="Bgbarber.png" Aspect="AspectFit" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+                <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" Source="Glinear.png" Aspect="AspectFit" VerticalOptions="Start"/>
+
+                <Image Grid.Row="0" IsVisible="True" Grid.Column="0" Margin="0, 40, 0, 0" Source="logobarber.png" WidthRequest="150" HorizontalOptions="CenterAndExpand"/>
+
+                <StackLayout IsVisible="True" Grid.Row="1" Grid.Column="0" Spacing="0" HorizontalOptions="FillAndExpand" Margin="0, 0, 0, 20">
+                    <Label Text="Barbearia" Style="{StaticResource StlBarberName}"/>
+                    <Label Text="Clube Esporte" Style="{StaticResource StlBarberName}"/>
+                </StackLayout>
+
+                <RelativeLayout IsVisible="True" Grid.Row="2" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                    <Image  Source="ButtonAberto.png" VerticalOptions="StartAndExpand" Margin="0, 17, 0, 0"
+                                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.25}"
+                                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.40}"/>
+
+                    <Image x:Name="AgendarButton" Source="ButtonAgendar.png" VerticalOptions="StartAndExpand"
+                                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5}"
+                                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5}"/>
+                </RelativeLayout>
+
+                <StackLayout Spacing="20" Grid.Row="3" Grid.Column="0" Padding="0, 0, 0, 50">
+                    <StackLayout Orientation="Horizontal" Spacing="20">
+                        <Image Source="barber1.jpg" WidthRequest="150" HorizontalOptions="EndAndExpand"/>
+                        <Image Source="barber2.jpg" WidthRequest="150" HorizontalOptions="StartAndExpand"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Spacing="20">
+                        <Image Source="barber3.jpg" WidthRequest="150" HorizontalOptions="EndAndExpand"/>
+                        <Image Source="barber4.jpg" WidthRequest="150" HorizontalOptions="StartAndExpand"/>
+                    </StackLayout>
+                </StackLayout>
+
+
+                <StackLayout Grid.Row="4" Grid.Column="0" IsVisible="True" Spacing="0" Padding="0, 0, 0, 0">
+                    <StackLayout Style="{StaticResource StlBar}">
+                        <Label Text="Profissionais" Style="{StaticResource StlBarLabel}"/>
+                    </StackLayout>
+
+                    <BoxView Style="{StaticResource StlBarBoxView}"/>
+
+                    <Grid ColumnSpacing="20" RowSpacing="20" Padding="20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="150"/>
+                            <RowDefinition Height="150"/>
+                        </Grid.RowDefinitions>
+
+                        <StackLayout VerticalOptions="Start" Grid.Column="0" Grid.Row="0" HorizontalOptions="FillAndExpand" Spacing="0">
+                            <Image Source="walter.png"/>
+                            <Label Text="Walter" FontSize="16" TextColor="White" HorizontalOptions="Center" Margin="0, 5, 0, 0"/>
+                            <Label Text="Barbeiro" FontSize="14" TextColor="OrangeRed" HorizontalOptions="Center" />
+                        </StackLayout>
+
+                        <StackLayout Grid.Column="1" Grid.Row="0" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0">
+                            <Image Source="paige.png"/>
+                            <Label Text="Paige" FontSize="16" TextColor="White" HorizontalOptions="Center" Margin="0, 5, 0, 0"/>
+                            <Label Text="Manicure" FontSize="14" TextColor="OrangeRed" HorizontalOptions="Center" />
+                        </StackLayout>
+
+                        <StackLayout Grid.Column="2" Grid.Row="0" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0">
+                            <Image Source="tobby.png"/>
+                            <Label Text="Tobby" FontSize="16" TextColor="White" HorizontalOptions="Center" Margin="0, 5, 0, 0"/>
+                            <Label Text="Barbeiro" FontSize="14" TextColor="OrangeRed" HorizontalOptions="Center" />
+                        </StackLayout>
+
+                        <StackLayout Grid.Column="0" Grid.Row="1" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0">
+                            <Image Source="happy.png"/>
+                            <Label Text="Happy" FontSize="16" TextColor="White" HorizontalOptions="Center" Margin="0, 5, 0, 0"/>
+                            <Label Text="Pedicure" FontSize="14" TextColor="OrangeRed" HorizontalOptions="Center" />
+                        </StackLayout>
+
+                        <StackLayout Grid.Column="1" Grid.Row="1" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0">
+                            <Image Source="ralph.png"/>
+                            <Label Text="Ralph" FontSize="16" TextColor="White" HorizontalOptions="Center" Margin="0, 5, 0, 0"/>
+                            <Label Text="Barbeiro" FontSize="14" TextColor="OrangeRed" HorizontalOptions="Center" />
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

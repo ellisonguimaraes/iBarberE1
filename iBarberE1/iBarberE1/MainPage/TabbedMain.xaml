@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="iBarberE1.MainPage.TabbedMain"
+             xmlns:local ="clr-namespace:iBarberE1.MainPage"
+             BackgroundColor="#01090E"
+             BarBackgroundColor="#01090E"
+             NavigationPage.HasNavigationBar="False">
+
+    <local:Barbearia Icon="home.png"/>
+    <local:Enderecos Icon="address.png"/>
+    <local:Produtos Icon="shop.png"/>
+    <local:Servicos Icon="services.png" />
+
+</TabbedPage>

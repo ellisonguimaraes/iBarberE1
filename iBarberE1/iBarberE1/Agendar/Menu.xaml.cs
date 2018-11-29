@@ -90,5 +90,11 @@ namespace iBarberE1.Agendar
                 ViewMore.Text = "OCULTAR";
             }
         }
+
+
+        public void View_ServicesSelect(object sender, EventArgs args)
+        {
+            Navigation.PushAsync(new iBarberE1.Agendar.ServicesSelect());
+        }
     }
 }

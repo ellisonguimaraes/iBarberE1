@@ -1,4 +1,4 @@
-﻿ <?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="iBarberE1.MainPage.Main2"
@@ -47,20 +47,22 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
 
                 <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="10" Source="Bgbarber.png" Aspect="AspectFit" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
                 <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="10" Source="Glinear.png" Aspect="AspectFit" VerticalOptions="Start"/>
 
-                <Image Grid.Row="0" IsVisible="False" Grid.Column="0" Source="logobarber.png" WidthRequest="150" HorizontalOptions="CenterAndExpand" BackgroundColor="Green"/>
+                <Image Grid.Row="0" IsVisible="True" Grid.Column="0" Margin="0, 40, 0, 0" Source="logobarber.png" WidthRequest="150" HorizontalOptions="CenterAndExpand"/>
 
-                <StackLayout IsVisible="False" BackgroundColor="Red" Grid.Row="1" Grid.Column="0" Spacing="0" HorizontalOptions="FillAndExpand" >
+                <StackLayout IsVisible="True" Grid.Row="1" Grid.Column="0" Spacing="0" HorizontalOptions="FillAndExpand" Margin="0, 0, 0, 20">
                     <Label Text="Barbearia" Style="{StaticResource StlBarberName}"/>
                     <Label Text="Clube Esporte" Style="{StaticResource StlBarberName}"/>
                 </StackLayout>
 
-                <RelativeLayout IsVisible="False" BackgroundColor="Pink" Grid.Row="2" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                <RelativeLayout IsVisible="True" Grid.Row="2" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
                     <Image  Source="ButtonAberto.png" VerticalOptions="StartAndExpand" Margin="0, 17, 0, 0"
                                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.25}"
                                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.40}"/>
@@ -72,9 +74,7 @@
 
 
 
-                
-                
-                <StackLayout BackgroundColor="BlueViolet" Grid.Row="3" Grid.Column="0" IsVisible="True" Spacing="0">
+                <StackLayout Grid.Row="3" Grid.Column="0" IsVisible="True" Spacing="0" Padding="0, 0, 0, 40">
 
                     <StackLayout Style="{StaticResource StlBar}">
                         <Label Text="Endereço" Style="{StaticResource StlBarLabel}"/>
@@ -83,7 +83,7 @@
                     <BoxView Style="{StaticResource StlBarBoxView}"/>
 
 
-                    <ListView x:Name="EnderecoListView" HasUnevenRows="True" RowHeight="100" HeightRequest="120">
+                    <ListView x:Name="EnderecoListView" RowHeight="120" HeightRequest="120">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
@@ -103,9 +103,156 @@
 
                     <Button x:Name="MoreView" Clicked="ButtonViewMore" Text="Ver mais" BackgroundColor="Transparent" TextColor="OrangeRed" HorizontalOptions="CenterAndExpand" />
                 </StackLayout>
-                
-                
-                
+
+
+                <StackLayout Grid.Row="4" Grid.Column="0" IsVisible="True" Spacing="0" Padding="0, 0, 0, 40">
+                    <StackLayout Style="{StaticResource StlBar}">
+                        <Label Text="Profissionais" Style="{StaticResource StlBarLabel}"/>
+                    </StackLayout>
+
+                    <BoxView Style="{StaticResource StlBarBoxView}"/>
+
+                    <Grid ColumnSpacing="20" RowSpacing="20" Padding="20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="150"/>
+                            <RowDefinition Height="150"/>
+                        </Grid.RowDefinitions>
+
+                        <StackLayout VerticalOptions="Start" Grid.Column="0" Grid.Row="0" HorizontalOptions="FillAndExpand" Spacing="0">
+                            <Image Source="walter.png"/>
+                            <Label Text="Walter" FontSize="16" TextColor="White" HorizontalOptions="Center" Margin="0, 5, 0, 0"/>
+                            <Label Text="Barbeiro" FontSize="14" TextColor="OrangeRed" HorizontalOptions="Center" />
+                        </StackLayout>
+
+                        <StackLayout Grid.Column="1" Grid.Row="0" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0">
+                            <Image Source="paige.png"/>
+                            <Label Text="Paige" FontSize="16" TextColor="White" HorizontalOptions="Center" Margin="0, 5, 0, 0"/>
+                            <Label Text="Manicure" FontSize="14" TextColor="OrangeRed" HorizontalOptions="Center" />
+                        </StackLayout>
+
+                        <StackLayout Grid.Column="2" Grid.Row="0" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0">
+                            <Image Source="tobby.png"/>
+                            <Label Text="Tobby" FontSize="16" TextColor="White" HorizontalOptions="Center" Margin="0, 5, 0, 0"/>
+                            <Label Text="Barbeiro" FontSize="14" TextColor="OrangeRed" HorizontalOptions="Center" />
+                        </StackLayout>
+
+                        <StackLayout Grid.Column="0" Grid.Row="1" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0">
+                            <Image Source="happy.png"/>
+                            <Label Text="Happy" FontSize="16" TextColor="White" HorizontalOptions="Center" Margin="0, 5, 0, 0"/>
+                            <Label Text="Pedicure" FontSize="14" TextColor="OrangeRed" HorizontalOptions="Center" />
+                        </StackLayout>
+
+                        <StackLayout Grid.Column="1" Grid.Row="1" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0">
+                            <Image Source="ralph.png"/>
+                            <Label Text="Ralph" FontSize="16" TextColor="White" HorizontalOptions="Center" Margin="0, 5, 0, 0"/>
+                            <Label Text="Barbeiro" FontSize="14" TextColor="OrangeRed" HorizontalOptions="Center" />
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+
+
+                <StackLayout Grid.Row="6" Grid.Column="0" IsVisible="True" Spacing="0" Padding="0, 0, 0, 40">
+                    <StackLayout Style="{StaticResource StlBar}">
+                        <Label Text="Produtos" Style="{StaticResource StlBarLabel}"/>
+                    </StackLayout>
+
+                    <BoxView Style="{StaticResource StlBarBoxView}"/>
+
+                    <Grid ColumnSpacing="40" Margin="40, 40, 40, 20"  RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <StackLayout Spacing="0" Grid.Column="0" Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" Margin="0, 0, 0, 20">
+                            <Image Source="prod1.jpg" WidthRequest="140"/>
+                            <Label Text="Produto 1" TextColor="White" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0, 5, 0, 0"/>
+                            <Label TextColor="OrangeRed" Text="R$ 49,90" HorizontalTextAlignment="Center"/>
+                        </StackLayout>
+
+                        <StackLayout Spacing="0" Grid.Column="1" Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" Margin="0, 0, 0, 20">
+                            <Image Source="prod2.jpg" WidthRequest="140"/>
+                            <Label Text="Produto 2" TextColor="White" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0, 5, 0, 0"/>
+                            <Label TextColor="OrangeRed" Text="R$ 99,90" HorizontalTextAlignment="Center"/>
+                        </StackLayout>
+
+                        <StackLayout Spacing="0" Grid.Column="0" Grid.Row="1" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" Margin="0, 0, 0, 20">
+                            <Image Source="prod3.jpg" WidthRequest="140"/>
+                            <Label Text="Produto 3" TextColor="White" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0, 5, 0, 0"/>
+                            <Label TextColor="OrangeRed" Text="R$ 99,90" HorizontalTextAlignment="Center"/>
+                        </StackLayout>
+
+                        <StackLayout Spacing="0" Grid.Column="1" Grid.Row="1" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" Margin="0, 0, 0, 20">
+                            <Image Source="prod4.jpg" WidthRequest="140"/>
+                            <Label Text="Produto 4" TextColor="White" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0, 5, 0, 0"/>
+                            <Label TextColor="OrangeRed" Text="R$ 99,90" HorizontalTextAlignment="Center"/>
+                        </StackLayout>
+                    </Grid>
+
+
+                    <Button Text="VER MAIS" TextColor="OrangeRed" BackgroundColor="#12192C" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Margin="40, 0"/>
+                </StackLayout>
+
+
+
+                <StackLayout Grid.Row="5" Grid.Column="0" IsVisible="True" Spacing="0"  Padding="0, 0, 0, 40">
+                    <StackLayout Style="{StaticResource StlBar}">
+                        <Label Text="Serviços" Style="{StaticResource StlBarLabel}"/>
+                    </StackLayout>
+
+                    <BoxView Style="{StaticResource StlBarBoxView}"/>
+
+                    <StackLayout Spacing="0" Padding="20, 20, 20, 40">
+                        
+                        <StackLayout Padding="15" Orientation="Horizontal" Spacing="0">
+                            <Label Text="Serviço 1" TextColor="White" FontSize="16"  HorizontalOptions="FillAndExpand"/>
+                            <Label Text="R$ 15,00" TextColor="OrangeRed" FontSize="16" />
+                        </StackLayout>
+
+                        <BoxView HeightRequest="1" BackgroundColor="#1A284F" HorizontalOptions="FillAndExpand"/>
+
+                        <StackLayout Padding="15" Orientation="Horizontal" Spacing="0">
+                            <Label Text="Serviço 2" TextColor="White" FontSize="16"  HorizontalOptions="FillAndExpand"/>
+                            <Label Text="R$ 25,00" TextColor="OrangeRed" FontSize="16" />
+                        </StackLayout>
+
+                        <BoxView HeightRequest="1" BackgroundColor="#1A284F" HorizontalOptions="FillAndExpand"/>
+
+                        <StackLayout Padding="15" Orientation="Horizontal" Spacing="0">
+                            <Label Text="Serviço 3" TextColor="White" FontSize="16"  HorizontalOptions="FillAndExpand"/>
+                            <Label Text="R$ 35,00" TextColor="OrangeRed" FontSize="16" />
+                        </StackLayout>
+
+                        <BoxView HeightRequest="1" BackgroundColor="#1A284F" HorizontalOptions="FillAndExpand"/>
+
+                        <StackLayout Padding="15" Orientation="Horizontal" Spacing="0">
+                            <Label Text="Serviço 4" TextColor="White" FontSize="16"  HorizontalOptions="FillAndExpand"/>
+                            <Label Text="R$ 45,00" TextColor="OrangeRed" FontSize="16" />
+                        </StackLayout>
+
+                        <BoxView HeightRequest="1" BackgroundColor="#1A284F" HorizontalOptions="FillAndExpand"/>
+
+                    </StackLayout>
+
+
+                        
+                             
+
+                    <Button Text="VER MAIS" TextColor="OrangeRed" BackgroundColor="#12192C" VerticalOptions="Start" Margin="40, 0"/>
+                   
+
+                </StackLayout>
+
+
             </Grid>
         </ScrollView>
         

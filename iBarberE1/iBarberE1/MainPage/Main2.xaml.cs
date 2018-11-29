@@ -21,8 +21,27 @@ namespace iBarberE1.MainPage
 		{
 			InitializeComponent ();
 
+            //List<Servico> servicos = new List<Servico>();
             Enderecos = new List<Endereco>();
 
+
+            var tapAgendarButton = new TapGestureRecognizer();
+
+            //Binding events
+            tapAgendarButton.Tapped += Agendar_Tapped;
+
+            //Associating tap events to the image buttons 
+            AgendarButton.GestureRecognizers.Add(tapAgendarButton);
+
+            
+            /*
+            servicos.Add(new Servico() { Descricao = "Corte de tesoura", Valor = "R$ 30,00" });
+            servicos.Add(new Servico() { Descricao = "Corte de máquina", Valor = "R$ 15,00" });
+            servicos.Add(new Servico() { Descricao = "Corte de tesoura + máquina", Valor = "R$ 20,00" });
+            servicos.Add(new Servico() { Descricao = "Barba", Valor = "R$ 15,00" });
+            ServiceList.ItemsSource = servicos;
+            */
+            /*
             Enderecos.Add(new Endereco { Unidade = "UNIDADE I", Logradouro = "Endereço: Rua F, nº 99, Bairro Jardim Grapiuna. Itabuna/BA", Telefones = "(73) 3211-2566 / (73) 8899-5544" });
             Enderecos.Add(new Endereco { Unidade = "UNIDADE II", Logradouro = "Endereço: Rua F, nº 99, Bairro Jardim Grapiuna. Itabuna/BA", Telefones = "(73) 3211-2566 / (73) 8899-5544" });
             Enderecos.Add(new Endereco { Unidade = "UNIDADE III", Logradouro = "Endereço: Rua F, nº 99, Bairro Jardim Grapiuna. Itabuna/BA", Telefones = "(73) 3211-2566 / (73) 8899-5544" });
@@ -30,7 +49,7 @@ namespace iBarberE1.MainPage
             Enderecos.Add(new Endereco { Unidade = "UNIDADE V", Logradouro = "Endereço: Rua F, nº 99, Bairro Jardim Grapiuna. Itabuna/BA", Telefones = "(73) 3211-2566 / (73) 8899-5544" });
             Enderecos.Add(new Endereco { Unidade = "UNIDADE VI", Logradouro = "Endereço: Rua F, nº 99, Bairro Jardim Grapiuna. Itabuna/BA", Telefones = "(73) 3211-2566 / (73) 8899-5544" });
 
-            VerifyListCount1();
+            VerifyListCount1();*/
         }
 
         public void VerifyListCount1()
@@ -64,16 +83,21 @@ namespace iBarberE1.MainPage
         {
             if (EnderecoListView.ItemsSource == Enderecos)
             {
-                EnderecoListView.HeightRequest = EnderecosLittle.Count * 100 + 20;
+                EnderecoListView.HeightRequest = EnderecosLittle.Count * 120 + 20;
                 EnderecoListView.ItemsSource = EnderecosLittle;
                 MoreView.Text = "VER MAIS";
             }
             else
             {
-                EnderecoListView.HeightRequest = Enderecos.Count * 100 + 20;
+                EnderecoListView.HeightRequest = Enderecos.Count * 120 + 20;
                 EnderecoListView.ItemsSource = Enderecos;
                 MoreView.Text = "OCULTAR";
             }
+        }
+
+        private void Agendar_Tapped(object sender, EventArgs args)
+        {
+            Navigation.PushAsync(new iBarberE1.Agendar.Menu());
         }
 
     }
